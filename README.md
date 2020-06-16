@@ -49,28 +49,30 @@ ansible-vault encrypt_string --vault-password-file ~/secret.key 'your_token_here
 replace the one from an example at group_vars/all.yml with yours
 
 Create a VM:
+```bash
 ansible-playbook \
 - K \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 vm_create.yml
-
+```
 Install software:
-
+```bash
 ansible-playbook \
 -u root \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 --skip-tags "upgrade" \
 software_install.yml
-
+```
 Deploy service:
+```bash
 ansible-playbook \
 -u root \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 deploy_service.yml
-
+```
 
 
 Useful commands for debugging python scripts:

@@ -27,6 +27,7 @@ cat ~/.ssh/id_rsa.pub
 
 On Digital Ocean:
 Settings -> Security -> Add SSH Key
+Settings -> Applications & API -> Get token
 
 touch ~/secret.key
 echo "YourVeryPassPhrase" > ~/secret.key 

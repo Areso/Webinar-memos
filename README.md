@@ -80,21 +80,27 @@ lsof -i -P -n
 pgrep -af python
 
 Update service:
+```bash
 ansible-playbook \
 -u root \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 --extra-vars "raction=update_deploy" \
 deploy_service.yml
+```
 
 Destroy a VM:
+```bash
 ansible-playbook \
 - K \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 vm_destroy.yml
+```
+
 
 Destroy a VM:
+```bash
 ansible-playbook \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \

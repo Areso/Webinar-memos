@@ -56,6 +56,7 @@ ansible-playbook \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 vm_create.yml
+```
 
 Install software:
 ```bash

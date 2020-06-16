@@ -47,6 +47,7 @@ This token should be encrypted as well:
 ansible-vault encrypt_string --vault-password-file ~/secret.key 'your_token_here' --name 'gitlab_token'
 
 replace the one from an example at group_vars/all.yml with yours
+```
 
 Create a VM:
 ```bash
@@ -55,7 +56,7 @@ ansible-playbook \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 vm_create.yml
-```
+
 Install software:
 ```bash
 ansible-playbook \

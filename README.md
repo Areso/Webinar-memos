@@ -76,8 +76,10 @@ deploy_service.yml
 
 
 Useful commands for debugging python scripts:
+```bash
 lsof -i -P -n
 pgrep -af python
+```
 
 Update service:
 ```bash

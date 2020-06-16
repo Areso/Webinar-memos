@@ -52,7 +52,7 @@ replace the one from an example at group_vars/all.yml with yours
 Create a VM:
 ```bash
 ansible-playbook \
-- K \
+-k \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 vm_create.yml
@@ -95,7 +95,7 @@ deploy_service.yml
 Destroy a VM:
 ```bash
 ansible-playbook \
-- K \
+-k \
 --vault-password-file ~/secret.key \
 --inventory "web1, " \
 vm_destroy.yml
